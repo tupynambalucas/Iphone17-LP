@@ -17,7 +17,7 @@ function IphoneCanvas() {
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.toneMapping = THREE.NeutralToneMapping;
-    renderer.toneMappingExposure = 0.5;
+    renderer.toneMappingExposure = 0.8;
     renderer.setPixelRatio(window.devicePixelRatio);
     await renderer.init();
     return renderer as unknown as THREE.Renderer;
@@ -27,24 +27,24 @@ function IphoneCanvas() {
     <Canvas gl={glConfig} shadows>
       <Environment
         preset="studio"
-        backgroundBlurriness={0}
-        backgroundIntensity={0.7}
-        environmentIntensity={0.8}
+        backgroundBlurriness={0.8}
+        backgroundIntensity={0.8}
+        environmentIntensity={0.02}
       />
-      <ambientLight intensity={1.0} />
+      {/* <ambientLight intensity={1.0} /> */}
       <hemisphereLight
         color="#ffffff"
         groundColor="#ffffff"
-        intensity={10.0}
-        position={[0, 100, 0]}
+        intensity={18.0}
+        position={[0, 100, 30]}
       />
 
       <directionalLight
         position={[0, 0, 1500]}
-        intensity={0.1}
+        intensity={0.5}
         castShadow
         shadow-bias={-0.0001}
-        shadow-normalBias={0.05}
+        shadow-normalBias={0.06}
         shadow-mapSize={[2048, 2048]}
         target-position={iphonePosition}
       />

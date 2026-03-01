@@ -87,7 +87,6 @@ export function Model(props: ThreeElements['group']) {
             <mesh
               name="MSH_Button_Action"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Button_Action.geometry}
               material={AluminumMaterial}
             />
@@ -101,21 +100,18 @@ export function Model(props: ThreeElements['group']) {
             <mesh
               name="MSH_Button_Side"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Button_Side.geometry}
               material={AluminumMaterial}
             />
             <mesh
               name="MSH_Button_Volume_Down"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Button_Volume_Down.geometry}
               material={AluminumMaterial}
             />
             <mesh
               name="MSH_Button_Volume_Up"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Button_Volume_Up.geometry}
               material={AluminumMaterial}
             />
@@ -172,7 +168,6 @@ export function Model(props: ThreeElements['group']) {
             <mesh
               name="MSH_Camera_Plateau_Forged"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Camera_Plateau_Forged.geometry}
               material={AluminumMaterial}
             />
@@ -198,7 +193,6 @@ export function Model(props: ThreeElements['group']) {
               <mesh
                 name="MSH_Camera_Selfie_Attach"
                 castShadow
-                receiveShadow
                 geometry={nodes.MSH_Camera_Selfie_Attach.geometry}
                 material={AluminumMaterial}
               />
@@ -282,21 +276,18 @@ export function Model(props: ThreeElements['group']) {
             <mesh
               name="MSH_Chassis_Screws"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Chassis_Screws.geometry}
               material={AluminumMaterial}
             />
             <mesh
               name="MSH_Chassis_Speakers"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Chassis_Speakers.geometry}
               material={AluminumMaterial}
             />
             <mesh
               name="MSH_Chassis_Unibody_Frame"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Chassis_Unibody_Frame.geometry}
               material={AluminumMaterial}
             />
@@ -312,7 +303,6 @@ export function Model(props: ThreeElements['group']) {
             <mesh
               name="MSH_Rear_Logo"
               castShadow
-              receiveShadow
               geometry={nodes.MSH_Rear_Logo.geometry}
               material={AluminumMaterial}
             />
