@@ -48,11 +48,15 @@ function IphoneCanvas() {
           I balanced the intensity to 1.5 so it creates nice edge highlights on the aluminum without overexposing it. */}
       <directionalLight position={[10, 20, 15]} intensity={1.5} castShadow shadow-bias={-0.0001} />
 
-      <OrbitControls />
+      <OrbitControls
+        enableDamping={true}
+        dampingFactor={0.05}
+        minDistance={1}
+        maxDistance={20}
+        maxPolarAngle={Math.PI / 2}
+      />
 
-      <group position={iphonePosition}>
-        <Iphone />
-      </group>
+      <Iphone position={iphonePosition} rotation={[0, 0, 0]} scale={10} />
     </Canvas>
   );
 }
