@@ -6,22 +6,22 @@ This document describes the high-level architecture of the **iPhone 17 Pro Landi
 
 ```mermaid
 graph TD
-    User[User Interaction] --> View[@iphone17pro-lp/engine-react]
-    View --> Core[@iphone17pro-lp/engine-core]
-    View --> Assets[@iphone17pro-lp/engine-assets]
-    
+    User[User Interaction] --> View[@iphone17-lp/engine-react]
+    View --> Core[@iphone17-lp/engine-core]
+    View --> Assets[@iphone17-lp/engine-assets]
+
     subgraph "Presentation Layer (WebGPU)"
         View
         R3F[React Three Fiber v9]
         TSL[Three Shading Language]
     end
-    
+
     subgraph "Logic Layer (Pure TS)"
         Core
         XState[State Machines]
         Constants[Physics/Camera Config]
     end
-    
+
     subgraph "Resource Layer"
         Assets
         Models[GLB Models]
@@ -29,14 +29,18 @@ graph TD
     end
 ```
 
-### 1. `@iphone17pro-lp/engine-core` (The Brain)
+### 1. `@iphone17-lp/engine-core` (The Brain)
+
 **Role:** The single source of truth for the application state and business rules.
+
 - **Framework Agnostic:** Zero dependencies on React or Three.js (except math types).
 - **State Management:** XState machines define the possible states of the iPhone (e.g., `ViewingColors`, `ExploringCamera`, `StorageSelection`).
 - **Internationalization:** Contains all text and translation logic.
 
-### 2. `@iphone17pro-lp/engine-react` (The View)
+### 2. `@iphone17-lp/engine-react` (The View)
+
 **Role:** The visual runtime. It translates state into pixels.
+
 - **Tech Stack:** React 19, R3F v9, WebGPURenderer, TailwindCSS v4.
 - **Architecture Pattern: The Single Persistent Actor**
   - We do not destroy/recreate the iPhone model between sections.
@@ -44,8 +48,10 @@ graph TD
   - It listens to state changes from `engine-core` and transitions properties (rotation, material states, lighting) smoothly.
 - **TSL Implementation:** All shaders are written in TypeScript using TSL nodes, enabling runtime compilation for WebGPU.
 
-### 3. `@iphone17pro-lp/engine-assets` (The Resources)
+### 3. `@iphone17-lp/engine-assets` (The Resources)
+
 **Role:** Passive storage for heavy assets.
+
 - **Workflow:**
   1.  **Blender:** Used for modeling and defining "Placeholders" (e.g., a mesh named `Screen_Glass`).
   2.  **Export:** GLB (Draco Compressed).

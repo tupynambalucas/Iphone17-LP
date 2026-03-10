@@ -1,4 +1,4 @@
-import { PRODUCT_COLORS } from '@iphone17pro-lp/engine-core';
+import { PRODUCT_COLORS } from '@iphone17-lp/engine-core';
 import { MeshPhysicalNodeMaterial } from 'three/webgpu';
 import { color, float, mx_noise_float, add, mul, bumpMap, sample, vec3 } from 'three/tsl';
 

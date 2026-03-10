@@ -9,8 +9,8 @@ Type safety is paramount for the stability of our WebGPU pipeline.
 - **ZERO `any`**: The use of `any` is strictly prohibited (`@typescript-eslint/no-explicit-any`).
 - **Strict Null Checks**: Always handle `null` and `undefined` explicitly. TSL nodes often require strict types.
 - **Explicit Return Types**:
-  - **Mandatory** in `@iphone17pro-lp/engine-core` to ensure stable API contracts.
-  - **Recommended** in `@iphone17pro-lp/engine-react` for complex hooks and components.
+  - **Mandatory** in `@iphone17-lp/engine-core` to ensure stable API contracts.
+  - **Recommended** in `@iphone17-lp/engine-react` for complex hooks and components.
 - **Type Imports**: Use `import type` for all type declarations.
   ```typescript
   import type { IState } from './types'; // ✅
@@ -28,24 +28,29 @@ Type safety is paramount for the stability of our WebGPU pipeline.
 ## ⚛️ React & React Three Fiber (v9) Rules
 
 ### 1. The Render Loop (Hot Path)
+
 **CRITICAL**: The `useFrame` loop runs 60-120 times per second.
+
 - **NO Allocations**: Never create objects (`new THREE.Vector3()`, `new THREE.Matrix4()`) inside `useFrame`. Re-use module-level constants or `useMemo` variables.
-  - *ESLint Rule*: `react-three/no-clone-in-frame-loop`
+  - _ESLint Rule_: `react-three/no-clone-in-frame-loop`
 - **NO State Updates**: Never call `setState` or dispatch actions inside `useFrame` unless absolutely necessary (and throttled). Use `useRef` for visual updates.
-  - *ESLint Rule*: `react-three/no-fast-state`
+  - _ESLint Rule_: `react-three/no-fast-state`
 
 ### 2. Component Structure
+
 - **Functional Components Only**.
 - **Async Initialization**: The `<Canvas>` `gl` prop must use async initialization for WebGPURenderer.
+
   ```tsx
   import { WebGPURenderer } from 'three';
-  
+
   <Canvas gl={async (props) => {
     const renderer = new WebGPURenderer(props);
     await renderer.init();
     return renderer;
   }}>
   ```
+
 - **Type Safety (v9)**:
   - Do not use `GroupProps`, `MeshProps` (removed in v9).
   - Use `ThreeElements['group']` or `ThreeElements['mesh']`.
@@ -89,6 +94,7 @@ We do not use GLSL strings. We use TSL Nodes.
 ## 🔍 ESLint Highlights
 
 Refer to `eslint.config.ts` for the definitive list.
+
 - `@typescript-eslint/await-thenable`: Security against unhandled async operations.
 - `react-hooks/exhaustive-deps`: Mandatory.
 - `react/no-unknown-property`: Configured to allow R3F props (`rotation-x`, `attach`, etc.).

@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useGLTF } from '@react-three/drei';
 import { ThreeElements } from '@react-three/fiber';
 import { GLTF } from 'three-stdlib';
-import modelPath from '@iphone17pro-lp/engine-assets/models/gltf/iphone17pro.glb';
+import modelPath from '@iphone17-lp/engine-assets/models/gltf/iphone17pro.glb';
 import { AluminumMaterial } from '../materials/aluminium.material';
 
 type GLTFResult = GLTF & {
@@ -63,7 +63,7 @@ export function Model(props: ThreeElements['group']) {
   const { nodes, materials } = useGLTF(modelPath) as unknown as GLTFResult;
   console.log(props);
   return (
-    <group name="GRP_Iphone_17">
+    <group name="GRP_Iphone_17" {...props} dispose={null}>
       <group name="GRP_Antenna_System">
         <mesh
           name="MSH_Antenna_Bands"

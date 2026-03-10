@@ -56,7 +56,7 @@ function IphoneCanvas() {
         maxPolarAngle={Math.PI / 2}
       />
 
-      <Iphone position={iphonePosition} rotation={[0, 0, 0]} scale={10} />
+      <Iphone scale={30} position={iphonePosition} rotation={[0, 0, 0]} />
     </Canvas>
   );
 }

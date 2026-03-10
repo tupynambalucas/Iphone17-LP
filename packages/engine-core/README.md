@@ -1,10 +1,10 @@
-# 🧠 @iphone17pro-lp/engine-core
+# 🧠 @iphone17-lp/engine-core
 
 The "Brain" of the iPhone 17 Pro Landing Page.
 
 ## 🎯 Purpose
 
-To provide a **framework-agnostic**, **strictly typed**, and **testable** foundation for the application. This package defines *what* the iPhone is doing, not *how* it looks.
+To provide a **framework-agnostic**, **strictly typed**, and **testable** foundation for the application. This package defines _what_ the iPhone is doing, not _how_ it looks.
 
 ## 📦 Key Exports
 

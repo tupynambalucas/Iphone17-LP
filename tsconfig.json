@@ -8,7 +8,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@iphone17pro-lp/engine-core": ["./packages/engine-core/src/index.ts"]
+      "@iphone17-lp/engine-core": ["./packages/engine-core/src/index.ts"]
     }
   }
 }

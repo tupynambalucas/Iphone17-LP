@@ -1,4 +1,4 @@
-# 📦 @iphone17pro-lp/engine-assets
+# 📦 @iphone17-lp/engine-assets
 
 The central repository for static assets. This package acts as the "Content Delivery Network" for the local monorepo.
 
@@ -16,6 +16,7 @@ The central repository for static assets. This package acts as the "Content Deli
 ## 🚀 Integration
 
 This package is consumed by `engine-react`.
+
 - **Development**: Files are served directly or imported.
 - **Production**: Assets are copied to the public/dist folder of the frontend.
 

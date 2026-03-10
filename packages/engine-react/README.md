@@ -1,4 +1,4 @@
-# ⚛️ @iphone17pro-lp/engine-react
+# ⚛️ @iphone17-lp/engine-react
 
 The "View" layer, powered by **React 19** and **WebGPU**.
 
@@ -22,12 +22,14 @@ The "View" layer, powered by **React 19** and **WebGPU**.
 ## 🛡️ Typing (R3F v9)
 
 We use `ThreeElements` for strict typing of Three.js elements.
+
 - ❌ `import { GroupProps } from '@react-three/fiber'`
 - ✅ `import { ThreeElements } from '@react-three/fiber'` -> `ThreeElements['group']`
 
 ## ⚠️ Performance Rules (Strict Linting)
 
 This package uses strict ESLint rules to prevent common 3D performance pitfalls:
+
 1.  **`react-three/no-clone-in-frame-loop`**: Do not allocate objects in `useFrame`.
 2.  **`react-three/no-fast-state`**: Do not use `useState` for animation values.
 
@@ -35,6 +37,6 @@ This package uses strict ESLint rules to prevent common 3D performance pitfalls:
 
 ```bash
 npm run dev
-# Starts Vite server. 
-# Aliases '@iphone17pro-lp/engine-core' to the local source for easy debugging.
+# Starts Vite server.
+# Aliases '@iphone17-lp/engine-core' to the local source for easy debugging.
 ```

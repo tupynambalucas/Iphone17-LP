@@ -8,11 +8,11 @@ This project is a **Monorepo** engineered to separate business logic from the vi
 
 ### Workspaces
 
-| Package | Path | Responsibility |
-| :--- | :--- | :--- |
-| **`@iphone17pro-lp/engine-core`** | [`packages/engine-core`](packages/engine-core) | **Logic & State**. XState machines, strict types, i18n. Framework agnostic. |
-| **`@iphone17pro-lp/engine-react`** | [`packages/engine-react`](packages/engine-react) | **Presentation**. React 19, R3F v9, WebGPU Renderer, TSL Shaders. |
-| **`@iphone17pro-lp/engine-assets`** | [`packages/engine-assets`](packages/engine-assets) | **Assets**. GLB models, textures, and blend files. |
+| Package                          | Path                                               | Responsibility                                                              |
+| :------------------------------- | :------------------------------------------------- | :-------------------------------------------------------------------------- |
+| **`@iphone17-lp/engine-core`**   | [`packages/engine-core`](packages/engine-core)     | **Logic & State**. XState machines, strict types, i18n. Framework agnostic. |
+| **`@iphone17-lp/engine-react`**  | [`packages/engine-react`](packages/engine-react)   | **Presentation**. React 19, R3F v9, WebGPU Renderer, TSL Shaders.           |
+| **`@iphone17-lp/engine-assets`** | [`packages/engine-assets`](packages/engine-assets) | **Assets**. GLB models, textures, and blend files.                          |
 
 ## 🛠️ Installation
 
@@ -28,13 +28,16 @@ npm install
 Run these commands from the **project root**:
 
 ### Development
+
 ```bash
 # Start the Frontend (Vite)
 npm run dev:frontend
 ```
-*Note: This starts the development server for `engine-react`, which internally aliases `engine-core` source files for hot-reloading.*
+
+_Note: This starts the development server for `engine-react`, which internally aliases `engine-core` source files for hot-reloading._
 
 ### Quality Control
+
 ```bash
 # Run ESLint (Strict Type-Checking)
 npm run lint
@@ -44,6 +47,7 @@ npm run type-check
 ```
 
 ### Production Build
+
 ```bash
 # Build all packages in order
 npm run build
@@ -64,4 +68,5 @@ npm run build
 - **Styling:** [TailwindCSS v4](https://tailwindcss.com/)
 
 ---
+
 _Designed for performance. Built with Gemini._

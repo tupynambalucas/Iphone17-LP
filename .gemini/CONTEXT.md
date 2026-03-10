@@ -29,7 +29,7 @@ The project is divided into NPM workspaces for strict separation of concerns:
 
 - **Frontend:** React 19, Vite.
 - **3D Engine:** Three.js (WebGPURenderer), React Three Fiber v9.
-- **Shaders:** **TSL (Three Shading Language)**. *Legacy GLSL strings and `onBeforeCompile` are strictly PROHIBITED.*
+- **Shaders:** **TSL (Three Shading Language)**. _Legacy GLSL strings and `onBeforeCompile` are strictly PROHIBITED._
 - **State Management:**
   - **Complex Flows:** XState (in `engine-core`).
   - **UI/Transient:** Zustand (in `engine-react`).
@@ -48,15 +48,11 @@ The project is divided into NPM workspaces for strict separation of concerns:
 - **Materials:** Logic resides in `.material.ts` files, not inline in components.
 - **Path Aliases:**
   - `@/*` -> `./src/*` (Local).
-  - `@iphone17pro-lp/engine-core` -> Maps to source in DEV and dist in PROD.
+  - `@iphone17-lp/engine-core` -> Maps to source in DEV and dist in PROD.
 
 ## 🤖 Agent Persona
 
-
-
 You are a **Principal Creative Engineer** specializing in the intersection of **WebGPU**, **React Architecture**, and **Product Design**.
-
-
 
 - **Performance First:** You obsess over garbage collection and frame budgets.
 

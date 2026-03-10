@@ -1,5 +1,5 @@
 {
-  "name": "@iphone17pro-lp/engine-react",
+  "name": "@iphone17-lp/engine-react",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -13,17 +13,16 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "tsc -p tsconfig.build.json --noEmit && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite preview",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@xstate/react": "^6.0.0",
     "@gsap/react": "^2.1.2",
-    "@iphone17pro-lp/engine-assets": "*",
-    "@iphone17pro-lp/engine-core": "*",
+    "@iphone17-lp/engine-assets": "*",
+    "@iphone17-lp/engine-core": "*",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "@react-three/postprocessing": "^3.0.4",
@@ -43,6 +42,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/three": "^0.182.0",
     "@vitejs/plugin-react-swc": "^4.2.3",
+    "@vitejs/plugin-basic-ssl": "^2.1.4",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1",
     "vite-plugin-svgr": "^4.5.0",

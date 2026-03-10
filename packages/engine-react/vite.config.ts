@@ -5,15 +5,19 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import tailwindcss from '@tailwindcss/vite';
+import basicSsl from '@vitejs/plugin-basic-ssl';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig(({ mode }) => {
+  const isDev = mode === 'development';
+
   return {
     plugins: [
+      isDev ? basicSsl() : [],
       tsconfigPaths({
-        projects: [mode === 'development' ? './tsconfig.app.json' : './tsconfig.build.json'],
+        projects: [isDev ? './tsconfig.app.json' : './tsconfig.build.json'],
       }),
       tailwindcss(),
       react(),
@@ -23,7 +27,7 @@ export default defineConfig(({ mode }) => {
     ],
 
     optimizeDeps: {
-      exclude: ['@iphone17pro-lp/engine-core'],
+      exclude: ['@guardians/engine-core', '@guardians/engine-assets'],
     },
 
     base: './',
@@ -34,10 +38,16 @@ export default defineConfig(({ mode }) => {
       open: true,
     },
 
-    assetsInclude: ['**/*.glb', '**/*.gltf'],
+    preview: {
+      host: true,
+      port: 5173,
+      open: true,
+    },
+
+    assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.exr'],
 
     build: {
-      outDir: path.resolve(__dirname, '../../dist'),
+      outDir: path.resolve('dist'),
       emptyOutDir: true,
       sourcemap: mode === 'development',
       rollupOptions: {

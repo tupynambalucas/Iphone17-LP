@@ -8,12 +8,8 @@
     "declaration": true,
     "declarationMap": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@iphone17pro-lp/engine-core": ["../engine-core/src/index.ts"],
-      "@iphone17pro-lp/engine-assets/*": ["../engine-assets/src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "references": [
-    { "path": "../engine-core" }
-  ]
+  "references": [{ "path": "../engine-core" }]
 }
