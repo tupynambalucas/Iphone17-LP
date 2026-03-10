@@ -61,7 +61,6 @@ type GLTFResult = GLTF & {
 
 export function Model(props: ThreeElements['group']) {
   const { nodes, materials } = useGLTF(modelPath) as unknown as GLTFResult;
-  console.log(props);
   return (
     <group name="GRP_Iphone_17" {...props} dispose={null}>
       <group name="GRP_Antenna_System">
