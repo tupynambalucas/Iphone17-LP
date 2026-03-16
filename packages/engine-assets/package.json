@@ -1,7 +1,16 @@
 {
   "name": "@iphone17-lp/engine-assets",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/tupynambalucas/Iphone17-LP/tree/main/packages/engine-assets#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupynambalucas/Iphone17-LP.git",
+    "directory": "packages/engine-assets"
+  },
   "exports": {
     "./*": "./src/*"
   },

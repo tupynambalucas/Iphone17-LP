@@ -5,11 +5,11 @@
   "type": "module",
   "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
   "license": "CC-BY-NC-4.0",
-  "homepage": "https://github.com/tupynambalucas/EloOrganico/tree/main/packages/frontend#readme",
+  "homepage": "https://github.com/tupynambalucas/Iphone17-LP/tree/main/packages/engine-react#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
-    "directory": "packages/frontend"
+    "url": "git+https://github.com/tupynambalucas/Iphone17-LP.git",
+    "directory": "packages/engine-react"
   },
   "scripts": {
     "dev": "vite",
